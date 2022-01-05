@@ -1,0 +1,278 @@
+/* Global Rules  */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  --webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-heading {
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.main-heading::before {
+  content: "";
+  width: 30%;
+  height: 5px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff523b;
+  position: absolute;
+  border-radius: 20px;
+}
+/* Small  */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Global Rules  */
+/* start header  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  position: relative;
+}
+header .logo {
+  width: 75px;
+  height: 22.5px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  padding-right: 20px;
+}
+
+nav ul li a {
+  color: black;
+}
+.cart-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.img-menu {
+  width: 30px;
+  display: none;
+  margin-left: 20px;
+}
+@media (max-width: 767px) {
+  header {
+    padding: 10px 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #444;
+    width: 100%;
+    color: white;
+    text-align: right;
+    display: none;
+    transition: 0.3s;
+  }
+  nav ul li a {
+    color: white;
+  }
+  nav ul i {
+    display: none;
+  }
+
+  .img-menu {
+    display: block;
+  }
+  nav:hover ul {
+    display: block;
+  }
+}
+/* end header  */
+/* .Product .header {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.Product .header {
+  margin: 100px 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+    .Product .header {
+        margin: 20px 5px;
+    }
+}
+
+.Product select {
+  border: 1px solid #ff523b;
+  padding: 3px;
+}
+
+.Product .card-product {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 80px 100px 80px ;
+}
+
+@media (max-width: 767px) {
+  .Product .card-product {
+    margin: 20px 0;
+  }
+}
+
+.Product .card-product .card img {
+  max-width: 100%;
+}
+.Product .card-product .card i {
+    color: #ff523b;
+}
+.Product .card-product .card span {
+    color: #888;
+}
+
+.pages {
+    margin-bottom: 60px;
+    margin-left: 30px;
+}
+@media (max-width: 767px) {
+    .pages {
+        text-align: center;
+    }
+}
+.pages p  {
+    display:inline-block;
+    padding: 0 10px;
+    border: 1px solid #ff523b;
+}
+.pages i {
+    border: 1px solid #ff523b;
+    padding: 7px;
+}
+
+/* start footer  */
+footer {
+  background-color: black;
+  padding: 50px 0 20px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+footer .app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  color: white;
+}
+footer .app p {
+  margin-bottom: 10px;
+  color: #777;
+}
+footer .app .img {
+  display: flex;
+}
+footer .app img {
+  width: 150px;
+}
+
+footer .red-store {
+  text-align: center;
+  width: 35%;
+  color: white;
+}
+footer .red-store img {
+  width: 150px;
+}
+footer .red-store p {
+  color: #777;
+}
+
+footer .links,
+footer .follow {
+  width: 15%;
+  text-align: center;
+  color: white;
+}
+footer .links li a,
+footer .follow li a {
+  color: #777;
+}
+
+hr {
+  margin-top: 20px;
+}
+
+footer p:last-of-type {
+  color: #777;
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media (max-width: 767px) {
+  footer .container {
+    flex-direction: column;
+  }
+  footer .red-store,
+  footer .links,
+  footer .follow,
+  footer .app {
+    width: 100%;
+    text-align: center;
+  }
+  footer .app {
+    align-items: center;
+  }
+}
+
+/* start footer  */
